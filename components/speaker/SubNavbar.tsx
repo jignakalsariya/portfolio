@@ -7,6 +7,7 @@ export default function SpeakerSubNavbar() {
   const pathname = usePathname();
 
   const subLinks = [
+    { name: "Home", path: "/speaker" },
     { name: "Videos", path: "/speaker/videos" },
     { name: "About", path: "/speaker/about" },
     { name: "Book a session", path: "/speaker/book" },
