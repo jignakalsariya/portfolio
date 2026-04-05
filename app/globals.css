@@ -24,3 +24,35 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom Infinite Scroll Animation */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* 50% kyunki humne images ko double kiya hai */
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content; /* Content ke hisaab se width lega */
+  animation: infinite-scroll 40s linear infinite;
+}
+
+/* Hover par pause karne ke liye (Optional) */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
