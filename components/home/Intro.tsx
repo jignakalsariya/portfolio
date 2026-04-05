@@ -24,16 +24,16 @@ export default function IntroSection() {
           </h2>
 
           {/* Main Title - Pure White for readability */}
-          <p className="text-2xl md:text-3xl lg:text-3xl text-gray-300 leading-[1.3] font-bold max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl lg:text-2xl text-gray-300 leading-[1.3] font-bold max-w-4xl mx-auto">
             <span className="text-[#fe424d]">Jigna Kalsariya</span> is a Computer Science student at NIT Surat  who achieved the prestige of being a Gujarat State Topper in both her 10th (SSC) and 12th (HSC) board exams.
           </p>
           
           {/* Narrative Text - Light Gray for hierarchy */}
-          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto font-medium">
             Since she’s already walked that path to the top herself, she knows exactly what kind of discipline and strategy it takes for a student to hit those high percentages. 
           </p>
 
-          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
             Today, alongside her engineering journey, she also works as a <span className="text-[#fe424d] font-bold">Motivational Speaker,</span> breaking down the secrets of academic success and helping the youth move toward their goals with a clear, solid plan.
           </p>
         </div>

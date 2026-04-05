@@ -13,7 +13,7 @@ export default function PhotoGallery() {
   const repeatedImages = [...images, ...images, ...images];
 
   return (
-    <section className="bg-black w-full py-15 overflow-hidden border-t border-white/5">
+    <section className="bg-black w-full py-10 overflow-hidden border-t border-white/5">
       <div className="relative flex">
         
         {/* Ye class ab seedha globals.css se animation legi */}

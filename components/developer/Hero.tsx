@@ -26,7 +26,7 @@ export default function Hero() {
         {/* Mobile: w-full | Tablet/Desktop: 55-60% */}
         <div className="w-full md:w-[55%] lg:w-[50%] flex flex-col text-left justify-center">
           <p className="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl">
-            I am <span className="text-[#fe424d] font-bold">Jigna Kalsariya</span>, currently pursuing Computer Science and Engineering at <span className="text-[#fe424d] font-bold">NIT Surat. </span>
+            I am <span className="text-[#fe424d] font-bold">Jigna Kalsariya, </span>currently pursuing Computer Science and Engineering at <span className="text-[#fe424d] font-bold">NIT Surat. </span>
             I am a tech enthusiast driven by curiosity, problem-solving, and creating projects that make a difference in the real world.
           </p>
 
@@ -34,13 +34,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a 
               href="/developer/projects" 
-              className="px-6 py-2.5 md:px-8 md:py-3 bg-black border border-white/10 text-white/70 font-bold uppercase tracking-widest rounded-full hover:border-[#fe424d] hover:text-[#fe424d] transition-all duration-300 text-[10px] md:text-xs"
+              className="px-6 py-2.5 md:px-8 md:py-3 bg-black border border-gray-600 text-white/70 font-bold uppercase tracking-widest rounded-full hover:border-[#fe424d] hover:text-[#fe424d] transition-all duration-300 text-[10px] md:text-xs"
             >
               View Projects
             </a>
             <a 
               href="/developer/contact" 
-              className="px-6 py-2.5 md:px-8 md:py-3 bg-black border border-white/10 text-white/70 font-bold uppercase tracking-widest rounded-full hover:border-[#fe424d] hover:text-[#fe424d] transition-all duration-300 text-[10px] md:text-xs"
+              className="px-6 py-2.5 md:px-8 md:py-3 bg-black border border-gray-600 text-white/70 font-bold uppercase tracking-widest rounded-full hover:border-[#fe424d] hover:text-[#fe424d] transition-all duration-300 text-[10px] md:text-xs"
             >
               Contact Me
             </a>
