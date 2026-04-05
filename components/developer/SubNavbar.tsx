@@ -7,6 +7,7 @@ export default function SubNavbar() {
   const pathname = usePathname(); // Current URL nikalne ke liye
 
   const subLinks = [
+    { name: "Home", path: "/developer" },
     { name: "Academics", path: "/developer/academics" },
     { name: "Tech Stacks", path: "/developer/tech-stacks" },
     { name: "Projects", path: "/developer/projects" },

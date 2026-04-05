@@ -1,28 +1,28 @@
 "use client";
 
-import { Quote } from "lucide-react"; // Quote icon ke liye
+import { Quote, User } from "lucide-react"; // Quote icon ke liye
 
 export default function Testimonials() {
   const reviews = [
     {
       id: 1,
-      name: "Aryan Sharma",
-      role: "GDSC Lead, SVNIT",
-      quote: "Jigna's session on youth leadership was a game-changer for our community. Her ability to break down complex tech concepts into actionable leadership traits is rare and impactful.",
+      name: "Mitali Jivrajai",
+      role: "Student Attendee",
+      quote: "Jigna’s session was truly inspiring. The way she explained goal setting and self-discipline made it very easy to understand and apply in real life. I left the seminar feeling more focused and motivated than ever.",
       image: "/testimonials/p1.jpg"
     },
     {
       id: 2,
-      name: "Dr. Rajesh V.",
-      role: "Professor, CSE Dept",
-      quote: "It's rare to see a 2nd-year student with such clarity of thought and public speaking confidence. Her workshop on ROS2 was highly professional and well-received by her peers.",
+      name: "Ramesh Mehta",
+      role: "School Faculty Member",
+      quote: "Her talk on confidence and mindset created a lasting impact on our students. Jigna has a unique ability to connect with young minds and guide them in the right direction.",
       image: "/testimonials/p2.jpg"
     },
     {
       id: 3,
-      name: "Sneha Patel",
-      role: "Student Attendee",
-      quote: "I attended her 'Growth Mindset' talk last month. The energy she brings to the stage is infectious. She doesn't just speak; she actually connects with the students.",
+      name: "Khush Patel",
+      role: "Seminar Participant",
+      quote: "The session was not just motivational, but also very practical. Her insights on balancing academics, personal growth, and family values were extremely valuable.",
       image: "/testimonials/p3.jpg"
     }
   ];
@@ -60,11 +60,14 @@ export default function Testimonials() {
               {/* Reviewer Info */}
               <div className="relative z-10 flex items-center gap-4 border-t border-white/5 pt-6">
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-[#fe424d]/40 transition-all">
-                  <img 
+                  {/* <img 
                     src={rev.image} 
                     alt={rev.name} 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                  />
+                  /> */}
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
+                    <User className="text-gray-500 w-6 h-6" />
+                  </div>
                 </div>
                 <div className="flex flex-col">
                   <h4 className="text-gray-300 font-bold text-sm md:text-base group-hover:text-gray-100 transition-colors">

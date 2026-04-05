@@ -38,7 +38,7 @@ body {
 .animate-infinite-scroll {
   display: flex;
   width: max-content; /* Content ke hisaab se width lega */
-  animation: infinite-scroll 40s linear infinite;
+  animation: infinite-scroll 140s linear infinite;
 }
 
 /* Hover par pause karne ke liye (Optional) */
@@ -57,7 +57,7 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-@layer utilities {
+/* @layer utilities {
   .animate-infinite-scroll {
     display: flex;
     width: max-content;
@@ -67,5 +67,33 @@ body {
   @keyframes infinite-scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-33.33%); }
+  }
+} */
+
+/* Infinite Scroll Animation */
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  width: max-content;
+  flex-nowrap: nowrap;
+  animation: infinite-scroll 40s linear infinite;
+}
+
+.scroll-container:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: To make it smoother on mobile */
+@media (max-width: 768px) {
+  .scroll-container {
+    animation-duration: 30s; /* Mobile par thoda fast chale to sahi lagta hai */
   }
 }

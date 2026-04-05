@@ -7,25 +7,25 @@ export default function VideoGrid() {
       id: "vid1",
       title: "NYP Parliament on Youth Talks",
       description: "Addressing the national assembly on the importance of youth-led innovation and leadership.",
-      youtubeId: "YOUR_VIDEO_ID_1",
-      date: "MAR 2024",
-      category: "Leadership"
+      youtubeId: "z5pHXqcIl4o",
+      date: "MAR 2026",
+      category: "speech"
     },
     {
       id: "vid2",
       title: "SVNIT: The Future of Tech",
       description: "A keynote session at NIT Surat discussing how student developers can bridge the gap to industry.",
-      youtubeId: "YOUR_VIDEO_ID_2",
-      date: "JAN 2024",
-      category: "Tech Talk"
+      youtubeId: "7JQbmvALmkE",
+      date: "JAN 2026",
+      category: "speech"
     },
     {
       id: "vid3",
       title: "Mastering the Growth Mindset",
       description: "Practical strategies for students to build confidence and transform their career trajectory.",
-      youtubeId: "YOUR_VIDEO_ID_3",
-      date: "NOV 2023",
-      category: "Motivational"
+      youtubeId: "c1SFjRaTsxE",
+      date: "DEC 2024",
+      category: "speech"
     }
   ];
 
@@ -81,7 +81,7 @@ export default function VideoGrid() {
               </div>
 
               {/* Content Area */}
-              <div className="p-6 lg:p-8 flex flex-col flex-1">
+              {/* <div className="p-6 lg:p-8 flex flex-col flex-1">
                 <span className="text-[#fe424d] text-[9px] font-black uppercase tracking-[0.2em] mb-2">
                   {vid.category}
                 </span>
@@ -100,7 +100,7 @@ export default function VideoGrid() {
                 >
                   Watch Video
                 </a>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

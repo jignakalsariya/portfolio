@@ -7,73 +7,73 @@ export default function Topics() {
     id: "topic1",
     title: "Youth Leadership & Policy",
     description: "National Youth Parliament ke experience se seekha hua—kaise young leaders technology aur governance mein impact la sakte hain.",
-    youtubeId: "VIDEO_ID_1",
-    date: "MAR 2024",
+    youtubeId: "z5pHXqcIl4o",
+    date: "MAR 2026",
     category: "Leadership"
   },
   {
     id: "topic2",
     title: "Tech Innovation at SVNIT",
     description: "Engineering students ke liye roadmap: Kaise classroom projects ko industry-level products mein transform karein.",
-    youtubeId: "VIDEO_ID_2",
-    date: "JAN 2024",
-    category: "Tech Talk"
+    youtubeId: "Ay1D399k3NU",
+    date: "FEB 2026",
+    category: "Speech"
   },
   {
     id: "topic3",
     title: "The Growth Mindset Strategy",
     description: "Practical strategies for students to build confidence, handle academic pressure, and transform their career trajectory.",
-    youtubeId: "VIDEO_ID_3",
-    date: "NOV 2023",
-    category: "Motivational"
+    youtubeId: "7JQbmvALmkE",
+    date: "JAN 2026",
+    category: "Speech"
   },
   {
     id: "topic4",
     title: "Robotics & The ROS2 Ecosystem",
     description: "Deep dive into the world of robotics. Understanding why open-source is the future of hardware innovation.",
-    youtubeId: "VIDEO_ID_4",
-    date: "AUG 2023",
-    category: "Technical"
+    youtubeId: "HTTE5yZC1dk",
+    date: "JUN 2025",
+    category: "Motivational"
   },
   {
     id: "topic5",
     title: "Empowering Women in STEM",
     description: "Addressing the challenges and opportunities for women in tech. Inspiring the next generation of female engineers.",
-    youtubeId: "VIDEO_ID_5",
-    date: "MAY 2024",
-    category: "Community"
+    youtubeId: "c1SFjRaTsxE",
+    date: "DEC 2024",
+    category: "Speech"
   },
   {
     id: "topic6",
     title: "Building GDSC Communities",
     description: "The art of community building: How to lead a tech club and foster a culture of peer-to-peer learning.",
-    youtubeId: "VIDEO_ID_6",
-    date: "OCT 2023",
-    category: "Leadership"
+    youtubeId: "1kO5Q1Jsk0w",
+    date: "NOV 2024",
+    category: "Speech"
   },
   {
     id: "topic7",
     title: "Open Source Contribution 101",
     description: "Why contributing to open source is the best way to learn software engineering and build a global network.",
-    youtubeId: "VIDEO_ID_7",
-    date: "FEB 2024",
-    category: "Tech Talk"
+    youtubeId: "kBavN0LK0P8",
+    date: "AUG 2024",
+    category: "Speech"
   },
   {
     id: "topic8",
     title: "Public Speaking for Introverts",
     description: "Kaise stage fear ko overcome karein aur apni voice ko ek powerful tool ki tarah use karein effectively.",
-    youtubeId: "VIDEO_ID_8",
-    date: "APR 2024",
-    category: "Motivational"
+    youtubeId: "3s9F47yC62s",
+    date: "APR 2022",
+    category: "Community"
   },
   {
     id: "topic9",
     title: "The Future of AI & Ethics",
     description: "Exploring the impact of Artificial Intelligence on our daily lives and the importance of ethical development.",
-    youtubeId: "VIDEO_ID_9",
-    date: "SEP 2024",
-    category: "Technical"
+    youtubeId: "ubpEtG9TM8s",
+    date: "FEB 2020",
+    category: "Speech"
   }
 ];
 
@@ -119,7 +119,7 @@ export default function Topics() {
               {/* Image Container */}
               <div className="relative aspect-video overflow-hidden bg-zinc-900">
                 <img 
-                  src={`https://img.youtube.com/vi/${topic.youtubeId}/maxresdefault.jpg`} 
+                  src={`https://img.youtube.com/vi/${topic.youtubeId}/hqdefault.jpg`} 
                   alt={topic.title}
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
@@ -144,7 +144,7 @@ export default function Topics() {
               </div>
 
               {/* Content Area */}
-              <div className="p-6 lg:p-8 flex flex-col flex-1">
+              {/* <div className="p-6 lg:p-8 flex flex-col flex-1">
                 <span className="text-[#fe424d] text-[9px] font-black uppercase tracking-[0.2em] mb-2">
                   {topic.category}
                 </span>
@@ -163,7 +163,7 @@ export default function Topics() {
                 >
                   Watch Video
                 </a>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

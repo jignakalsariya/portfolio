@@ -42,7 +42,7 @@ export default function Hero() {
             <img 
               src="/speaker/jigna-intro.png" 
               alt="Jigna Kalsariya" 
-              className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700 hover:scale-[1.03]"
+              className="w-full h-full object-cover grayscale-[15%] transition-all duration-700"
             />
           </div>
         </div>
