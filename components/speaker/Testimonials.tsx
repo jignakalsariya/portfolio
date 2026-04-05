@@ -6,7 +6,7 @@ export default function Testimonials() {
   const reviews = [
     {
       id: 1,
-      name: "Mitali Jivrajai",
+      name: "Mitali Jivrajani",
       role: "Student Attendee",
       quote: "Jigna’s session was truly inspiring. The way she explained goal setting and self-discipline made it very easy to understand and apply in real life. I left the seminar feeling more focused and motivated than ever.",
       image: "/testimonials/p1.jpg"
