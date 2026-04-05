@@ -11,10 +11,9 @@ import {
   Mail, 
   Phone, 
   Send, 
-  CheckCircle, 
-  ChevronDown 
+  CheckCircle 
 } from "lucide-react";
-import { sendBookingEmail } from "@/app/actions/book"; // Make sure to create this action
+import { sendBookingEmail } from "@/app/actions/book"; 
 
 // 1. VALIDATION SCHEMA (Zod)
 const bookingSchema = z.object({
@@ -23,7 +22,7 @@ const bookingSchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Enter a valid phone number"),
   orgName: z.string().min(3, "Organization/College name is required"),
-  audienceSize: z.string().min(1, "Select audience size"),
+  audienceSize: z.string().min(1, "Please enter expected audience size"), // Updated message
   topic: z.string().min(1, "Please enter a topic"),
   eventDate: z.string().min(1, "Event date is required"),
   address: z.string().min(5, "Please provide city or venue address"),
@@ -44,7 +43,6 @@ export default function BookingForm() {
     resolver: zodResolver(bookingSchema),
   });
 
-  // 2. BACKEND HANDLER
   const onSubmit = async (data: BookingFormData) => {
     setLoading(true);
     
@@ -63,7 +61,6 @@ export default function BookingForm() {
     }
   };
 
-  // SUCCESS STATE VIEW
   if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center space-y-6 animate-in fade-in zoom-in duration-500">
@@ -144,33 +141,28 @@ export default function BookingForm() {
           <label className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500 ml-1">Organization Name</label>
           <input 
             {...register("orgName")}
-            placeholder="e.g. SVNIT Surat"
+            placeholder="e.g. Vaikunthdham Public School"
             className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-[#fe424d]/50 text-white placeholder:text-gray-700"
           />
           {errors.orgName && <p className="text-[#fe424d] text-[10px] mt-1">{errors.orgName.message}</p>}
         </div>
 
-        {/* AUDIENCE SIZE (Custom Dropdown) */}
+        {/* AUDIENCE SIZE (Text Input Updated) */}
         <div className="space-y-2">
           <label className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500 ml-1">Expected Audience</label>
-          <div className="relative group flex items-center">
-            <Users className="absolute left-4 text-gray-700 group-focus-within:text-[#fe424d] transition-colors w-4 h-4 pointer-events-none z-10" />
-            <select 
+          <div className="relative group">
+            <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 group-focus-within:text-[#fe424d] transition-colors w-4 h-4 pointer-events-none" />
+            <input 
+              type="text"
               {...register("audienceSize")}
-              className="w-full bg-black/50 border border-white/10 rounded-xl pl-12 pr-12 py-4 focus:outline-none focus:border-[#fe424d]/50 text-gray-500 appearance-none cursor-pointer hover:border-white/20 transition-all relative z-0"
-            >
-              <option value="" className="bg-[#121212] text-gray-500">Select Size</option>
-              <option value="50-200" className="bg-[#121212] text-gray-500">50 - 200 People</option>
-              <option value="200-500" className="bg-[#121212] text-gray-500">200 - 500 People</option>
-              <option value="500-1000" className="bg-[#121212] text-gray-500">500 - 1000 People</option>
-              <option value="1000+" className="bg-[#121212] text-gray-500">1000+ People (Large Event)</option>
-            </select>
-            <ChevronDown className="absolute right-4 text-gray-700 group-hover:text-gray-400 transition-colors w-4 h-4 pointer-events-none z-10" />
+              placeholder="e.g. 500+ or 200-300"
+              className={`w-full bg-black/50 border ${errors.audienceSize ? 'border-red-500' : 'border-white/10'} rounded-xl pl-12 pr-5 py-4 focus:outline-none focus:border-[#fe424d]/50 transition-all text-white placeholder:text-gray-700`}
+            />
           </div>
           {errors.audienceSize && <p className="text-[#fe424d] text-[10px] mt-1">{errors.audienceSize.message}</p>}
         </div>
 
-        {/* TOPIC (Text Input) */}
+        {/* TOPIC */}
         <div className="space-y-2">
           <label className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500 ml-1">Topic / Keynote Subject</label>
           <input 
