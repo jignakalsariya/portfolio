@@ -1,5 +1,5 @@
 import SubNavbar from "@/components/speaker/SubNavbar";
-import Video from "@/components/speaker/videos/Video";
+import Video from "@/components/speaker/Video";
 
 export default function SpeakerVideosPage() {
   return (
