@@ -14,7 +14,7 @@ export async function sendBookingEmail(formData: any) {
 
   // 2. Email Content Design Karein
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: `"${formData.name}" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER,
     replyTo: formData.email,
     subject: `New Booking Request for ${formData.topic} from ${formData.firstName} ${formData.lastName}`,
