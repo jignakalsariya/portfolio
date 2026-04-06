@@ -30,7 +30,7 @@ export default function MediaKit() {
       {/* Main Slider Container */}
       <div className="relative flex overflow-hidden">
         {/* whitespace-nowrap aur flex-nowrap zaroori hain seamless loop ke liye */}
-        <div className="flex flex-nowrap animate-infinite-scroll gap-6 md:gap-10 hover:[animation-play-state:paused] w-max">
+        <div className="flex flex-nowrap animate-infinite-scroll-speaker gap-6 md:gap-10 hover:[animation-play-state:paused] w-max">
           {repeatedImages.map((src, index) => (
             <div 
               key={index} 

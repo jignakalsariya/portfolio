@@ -78,7 +78,7 @@ export default function Topics() {
 ];
 
   return (
-    <section className="bg-black px-6 border-t border-white/5 font-jakarta text-white">
+    <section className="bg-black px-6 pb-10  border-white/5 font-jakarta text-white">
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         
         {/* CENTERED HEADING (Matches VideoGrid) */}

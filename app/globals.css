@@ -25,26 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom Infinite Scroll Animation */
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%); /* 50% kyunki humne images ko double kiya hai */
-  }
-}
-
-.animate-infinite-scroll {
-  display: flex;
-  width: max-content; /* Content ke hisaab se width lega */
-  animation: infinite-scroll 140s linear infinite;
-}
-
-/* Hover par pause karne ke liye (Optional) */
-.animate-infinite-scroll:hover {
-  animation-play-state: paused;
-}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
@@ -57,43 +37,33 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* @layer utilities {
-  .animate-infinite-scroll {
-    display: flex;
-    width: max-content;
-    animation: infinite-scroll 35s linear infinite;
-  }
-
-  @keyframes infinite-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-33.33%); }
-  }
-} */
-
-/* Infinite Scroll Animation */
 @keyframes infinite-scroll {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* 2 sets hain, toh half distance move karna hai */
   }
 }
 
-.scroll-container {
+.animate-infinite-scroll {
   display: flex;
-  width: max-content;
-  flex-nowrap: nowrap;
-  animation: infinite-scroll 40s linear infinite;
+  width: max-content; /* Ye line sabse zaroori hai */
+  flex-wrap: nowrap;
+  animation: infinite-scroll 20s linear infinite;
 }
 
-.scroll-container:hover {
+.animate-infinite-scroll:hover {
   animation-play-state: paused;
 }
 
-/* Optional: To make it smoother on mobile */
-@media (max-width: 768px) {
-  .scroll-container {
-    animation-duration: 30s; /* Mobile par thoda fast chale to sahi lagta hai */
-  }
+.animate-infinite-scroll-speaker {
+  display: flex;
+  width: max-content; /* Ye line sabse zaroori hai */
+  flex-wrap: nowrap;
+  animation: infinite-scroll 120s linear infinite;
+}
+
+.animate-infinite-scroll-speaker:hover {
+  animation-play-state: paused;
 }

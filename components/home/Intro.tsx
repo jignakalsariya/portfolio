@@ -9,12 +9,13 @@ export default function IntroSection() {
         {/* 1. Circle Photo with #fe424d Border & Glow */}
         <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-[6px] border-[#fe424d] shadow-[0_0_50px_rgba(254,66,77,0.15)] transition-all duration-500 hover:scale-105">
           <Image 
-            src="/jigna-intro.png" 
-            alt="Jigna Kalsariya"
-            fill
-            className="object-cover"
-            priority
-          />
+  src="/home/jigna-intro.png" 
+  alt="Jigna Kalsariya"
+  fill
+  className="object-cover"
+  priority // Ye intro image ke liye bahut zaroori hai (LCP optimization)
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+/>
         </div>
 
         {/* 2. Text Content (Updated for Dark Background) */}

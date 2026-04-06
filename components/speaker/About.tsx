@@ -12,7 +12,7 @@ export default function About() {
   {/* Main Image Container */}
   <div className="relative aspect-[4/5] md:aspect-square overflow-hidden">
     <Image 
-      src="/speaker/jigna-about.jpg" 
+      src="/speaker/jigna-about.png" 
       alt="Jigna Kalsariya"
       fill
       // Only Scale effect on hover
