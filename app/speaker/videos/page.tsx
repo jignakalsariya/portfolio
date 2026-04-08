@@ -3,10 +3,9 @@ import Video from "@/components/speaker/Video";
 
 export default function SpeakerVideosPage() {
   return (
-    // Background pure black aur text white taaki consistency bani rahe
     <main className="bg-black text-white min-h-screen">
       <SubNavbar />
-      <div className="pt-10"> {/* SubNavbar ke baad thoda space */}
+      <div className="pt-10"> 
         <Video />
       </div>
     </main>

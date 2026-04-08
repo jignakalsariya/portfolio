@@ -81,42 +81,38 @@ export default function Topics() {
     <section className="bg-black px-6 pb-10  border-white/5 font-jakarta text-white">
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         
-        {/* CENTERED HEADING (Matches VideoGrid) */}
         <div className="flex flex-col items-center text-center gap-6 px-4 md:px-0">
-  {/* TOP LABEL / HEADING */}
-  <div className="flex flex-col gap-3">
-    <h2 className="text-[#fe424d] font-black tracking-[0.3em] uppercase text-sm md:text-lg lg:text-xl">
-      Signature Keynotes
-    </h2>
+
+          <div className="flex flex-col gap-3">
+            <h2 className="text-[#fe424d] font-black tracking-[0.3em] uppercase text-sm md:text-lg lg:text-xl">
+              Signature Keynotes
+            </h2>
     
-  </div>
+          </div>
 
-  {/* DESCRIPTION SECTION */}
-  <div className="max-w-4xl flex flex-col gap-6">
+          <div className="max-w-4xl flex flex-col gap-6">
 
-    <p className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose tracking-wide">
-      Jigna Kalsariya is a passionate motivational speaker who has delivered impactful speeches across a wide range of platforms. 
-      She has conducted <span className="text-white font-bold underline underline-offset-4 decoration-[#fe424d]/50">100+ seminars</span>, 
-      guiding students on how to set meaningful goals, stay focused, and achieve success in their academic and personal journeys.
-    </p>
+            <p className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed md:leading-loose tracking-wide">
+              Jigna Kalsariya is a passionate motivational speaker who has delivered impactful speeches across a wide range of platforms. 
+              She has conducted <span className="text-white font-bold underline underline-offset-4 decoration-[#fe424d]/50">100+ seminars</span>, 
+              guiding students on how to set meaningful goals, stay focused, and achieve success in their academic and personal journeys.
+            </p>
 
-    <p className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto px-6 tracking-wide">
-  Her sessions also extend to family values and social awareness, where she shares 
-  practical insights to build stronger relationships and a responsible mindset. 
-  Through her engaging talks, Jigna continues to inspire individuals to grow with 
-  <span className="text-white font-medium"> confidence, clarity, and purpose.</span>
-</p>
-  </div>
-</div>
+            <p className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto px-6 tracking-wide">
+              Her sessions also extend to family values and social awareness, where she shares 
+              practical insights to build stronger relationships and a responsible mindset. 
+              Through her engaging talks, Jigna continues to inspire individuals to grow with 
+              <span className="text-white font-medium"> confidence, clarity, and purpose.</span>
+            </p>
+          </div>
+        </div>
 
-        {/* 1 ROW GRID (Exact Same Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {topics.map((topic) => (
             <div 
               key={topic.id} 
               className="group flex flex-col bg-zinc-900/40 border border-white/10 rounded-3xl overflow-hidden hover:border-[#fe424d]/35 transition-all duration-500"
             >
-              {/* Image Container */}
               <div className="relative aspect-video overflow-hidden bg-zinc-900">
                 <img 
                   src={`https://img.youtube.com/vi/${topic.youtubeId}/hqdefault.jpg`} 
@@ -124,14 +120,12 @@ export default function Topics() {
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
                 
-                {/* Date Badge (Used as Topic Index) */}
                 <div className="absolute top-4 right-4 px-2 py-1.5 bg-black/50 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white/80 text-[8px] md:text-[9px] font-black uppercase tracking-[0.2em] leading-none">
                     {topic.date}
                   </span>
                 </div>
 
-                {/* Play Button */}
                 <a 
                   href={`https://www.youtube.com/watch?v=${topic.youtubeId}`}
                   target="_blank"

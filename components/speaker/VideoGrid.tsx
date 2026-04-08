@@ -31,10 +31,8 @@ export default function VideoGrid() {
 
   return (
     <section className="bg-black py-15 px-6 border-t border-white/5 font-jakarta text-white">
-      {/* Container width ko 7xl rakha hai taaki 1 row mein space achhi mile */}
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         
-        {/* CENTERED HEADING */}
         <div className="flex justify-center">
           <Link 
             href="/speaker/videos" 
@@ -46,14 +44,12 @@ export default function VideoGrid() {
           </Link>
         </div>
 
-        {/* 1 ROW GRID (md:grid-cols-3 ensures all 3 items stay in one row from tablet upwards) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {videos.map((vid) => (
             <div 
               key={vid.id} 
               className="group flex flex-col bg-zinc-900/40 border border-white/10 rounded-3xl overflow-hidden hover:border-[#fe424d]/35 transition-all duration-500"
             >
-              {/* Image Container */}
               <div className="relative aspect-video overflow-hidden bg-zinc-900">
                 <img 
                   src={`https://img.youtube.com/vi/${vid.youtubeId}/maxresdefault.jpg`} 
@@ -61,14 +57,12 @@ export default function VideoGrid() {
                   className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
                 
-                {/* Date Badge */}
                 <div className="absolute top-4 right-4 px-2 py-1.5 bg-black/50 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white/80 text-[8px] md:text-[9px] font-black uppercase tracking-[0.2em] leading-none">
                     {vid.date}
                   </span>
                 </div>
 
-                {/* Play Button */}
                 <a 
                   href={`https://www.youtube.com/watch?v=${vid.youtubeId}`}
                   target="_blank"

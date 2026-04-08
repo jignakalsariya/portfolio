@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import SubNavbar from "@/components/developer/SubNavbar"; // Aapka SubNavbar path
-import ContactForm from "@/components/developer/ContactForm"; // Aapka ContactForm path
+import SubNavbar from "@/components/developer/SubNavbar"; 
+import ContactForm from "@/components/developer/ContactForm"; 
 
 export default function ContactPage() {
   return (

@@ -11,16 +11,13 @@ export default function PhotoGallery() {
     "/home/gallery5.png",
   ];
 
-  // Seamless loop ke liye exact 2 baar repeat karein
   const repeatedImages = [...images, ...images];
 
   return (
     <section className="bg-black w-full py-20 overflow-hidden border-t border-white/5">
       
-      {/* Outer Wrapper */}
       <div className="relative flex w-full overflow-hidden">
         
-        {/* Animated Track: 'w-max' aur 'flex-nowrap' zaroori hain */}
         <div className="animate-infinite-scroll flex flex-nowrap gap-6 md:gap-10 w-max">
           {repeatedImages.map((src, index) => (
             <div 
@@ -31,12 +28,10 @@ export default function PhotoGallery() {
                 src={src}
                 alt={`Gallery photo ${index}`}
                 fill
-                // Performance optimize karne ke liye:
                 sizes="(max-width: 768px) 300px, 400px" 
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
-              {/* Vibrant Red Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#fe424d]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}

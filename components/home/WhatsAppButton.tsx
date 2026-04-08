@@ -16,13 +16,10 @@ export default function WhatsAppButton() {
     >
       <div className="relative group">
         
-        {/* Aura Effect: Default opacity 0, group-hover par hi animate aur visible hoga */}
         <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
         
-        {/* The Circle Button */}
         <div className="relative bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-500 transform group-hover:scale-110 active:scale-90">
           
-          {/* WhatsApp SVG Icon */}
           <svg 
             width="32" 
             height="32" 

@@ -3,7 +3,6 @@
 import nodemailer from "nodemailer";
 
 export async function sendBookingEmail(formData: any) {
-  // 1. Transporter Create Karein (Gmail Configuration)
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -12,7 +11,6 @@ export async function sendBookingEmail(formData: any) {
     },
   });
 
-  // 2. Email Content Design Karein
   const mailOptions = {
     from: `"${formData.name}" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER,
@@ -42,7 +40,6 @@ export async function sendBookingEmail(formData: any) {
   };
 
   try {
-    // 3. Email Send Karein
     await transporter.sendMail(mailOptions);
     return { success: true };
   } catch (error) {

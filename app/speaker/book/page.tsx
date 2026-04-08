@@ -1,6 +1,5 @@
 import SubNavbar from "@/components/speaker/SubNavbar";
 import BookingForm from "@/components/speaker/BookingForm";
-import Footer from "@/components/Footer";
 
 export default function BookingPage() {
   return (

@@ -14,7 +14,7 @@ export async function sendContactEmail(formData: { name: string; email: string; 
   const mailOptions = {
     from: `"${formData.name}" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER,
-    replyTo: formData.email, // Isse aap seedha user ko reply de payengi
+    replyTo: formData.email,
     subject: `New Message from ${formData.name}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; border: 1px solid #eee; border-radius: 10px; padding: 20px;">

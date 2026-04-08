@@ -6,7 +6,6 @@ import Testimonials from "@/components/speaker/Testimonials";
 
 export default function DeveloperPage() {
   return (
-    // Background pure black aur text white taaki consistency bani rahe
     <main className="bg-black text-white min-h-screen">
       
       <SubNavbar/>

@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { sendBookingEmail } from "@/app/actions/book"; 
 
-// 1. VALIDATION SCHEMA (Zod)
 const bookingSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
   lastName: z.string().min(2, "Last name is required"),
@@ -147,7 +146,7 @@ export default function BookingForm() {
           {errors.orgName && <p className="text-[#fe424d] text-[10px] mt-1">{errors.orgName.message}</p>}
         </div>
 
-        {/* AUDIENCE SIZE (Text Input Updated) */}
+        {/* AUDIENCE SIZE */}
         <div className="space-y-2">
           <label className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-500 ml-1">Expected Audience</label>
           <div className="relative group">

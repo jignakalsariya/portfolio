@@ -14,7 +14,6 @@ export default function MediaKit() {
     "/speaker/photo22.png", "/speaker/photo23.png"
   ];
 
-  // Seamless loop ke liye array ko sirf ek baar duplicate karna kaafi hai
   const repeatedImages = [...images, ...images];
 
   return (
@@ -27,9 +26,7 @@ export default function MediaKit() {
         </div>
       </div>
 
-      {/* Main Slider Container */}
       <div className="relative flex overflow-hidden">
-        {/* whitespace-nowrap aur flex-nowrap zaroori hain seamless loop ke liye */}
         <div className="flex flex-nowrap animate-infinite-scroll-speaker gap-6 md:gap-10 hover:[animation-play-state:paused] w-max">
           {repeatedImages.map((src, index) => (
             <div 
@@ -40,12 +37,10 @@ export default function MediaKit() {
               src={src}
               alt={`Gallery photo ${index}`}
               fill
-              // Ye line add karein:
               sizes="(max-width: 768px) 300px, 400px" 
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
-              {/* Download Button Overlay */}
               <a 
                 href={src} 
                 download 
@@ -56,7 +51,6 @@ export default function MediaKit() {
                 </div>
               </a>
 
-              {/* Red Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#fe424d]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
@@ -65,8 +59,8 @@ export default function MediaKit() {
 
       <div className="flex justify-center mt-16">
   <a 
-    href="/speaker/jigna-kalsariya-media-kit.zip" // Aapki zip file ka sahi path
-    download="Jigna_Kalsariya_Media_Kit.zip" // Download hone par file ka jo naam dikhega
+    href="/speaker/jigna-kalsariya-media-kit.zip" 
+    download="Jigna_Kalsariya_Media_Kit.zip"
     className="px-10 py-4 border border-white/10 text-gray-300 font-black uppercase tracking-[0.2em] text-[12px] rounded-xl hover:border-[#fe424d]/35 transition-all hover:bg-[#fe424d]/5 hover:text-gray-100 group inline-block text-center"
   >
     Download Entire Press Kit

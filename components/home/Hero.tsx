@@ -54,9 +54,6 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* 2. Navigation Arrows (Optimized for all screens) */}
-      
-      {/* Left Arrow */}
       <button 
         onClick={prevSlide}
         className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-30 
@@ -70,7 +67,6 @@ export default function Hero() {
         <ChevronLeft className="w-5 h-5 md:w-10 md:h-10" />
       </button>
 
-      {/* Right Arrow */}
       <button 
         onClick={nextSlide}
         className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-30 
@@ -84,7 +80,6 @@ export default function Hero() {
         <ChevronRight className="w-5 h-5 md:w-10 md:h-10" />
       </button>
 
-      {/* Subtle Overlay */}
       <div className="absolute inset-0 bg-black/5 z-20 pointer-events-none" />
     </section>
   );
