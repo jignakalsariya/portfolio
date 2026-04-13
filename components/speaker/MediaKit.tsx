@@ -56,16 +56,6 @@ export default function MediaKit() {
           ))}
         </div>
       </div>
-
-      <div className="flex justify-center mt-16">
-//  <a 
-//    href="/speaker/jigna-kalsariya-media-kit.zip" 
-//    download="Jigna_Kalsariya_Media_Kit.zip"
-//    className="px-10 py-4 border border-white/10 text-gray-300 font-black uppercase tracking-[0.2em] text-[12px] rounded-xl hover:border-[#fe424d]/35 transition-all hover:bg-[#fe424d]/5 hover:text-gray-100 group inline-block text-center"
-//  >
-//    Download Entire Press Kit
-//  </a>
-</div>
     </section>
   );
 }
